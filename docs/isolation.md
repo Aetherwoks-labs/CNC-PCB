@@ -1,4 +1,4 @@
-# 🌀 2. Isolation Routing (FlatCAM)
+# 🌀 Isolation Routing (FlatCAM)
 
 ## Step-by-step:
 1. **Load Gerber File**: Load the Bottom Copper layer (`.gbr`) into FlatCAM.
