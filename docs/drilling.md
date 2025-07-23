@@ -20,7 +20,6 @@
 5. Export G-code as `drill.nc`
 
 ## ⚠️ Notes & Tips
-- Make sure the drill bit length is long enough for `1.8 mm` depth
 - Always test spindle tightness and bit alignment
 - Do not forget to re-zero Z after bit change
 - Save job and run only **after isolation is complete**
