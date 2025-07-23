@@ -1,6 +1,6 @@
 # CNC-PCB
 
-# 🧠 Learn PCB Fabrication with CNC Machines
+# Learn PCB Fabrication with CNC Machines
 
 Welcome to **Aetherwoks-labs'** open resource hub for learning how to design and mill printed circuit boards using CNC machines. Whether you're a beginner or exploring advanced workflows, this repo curates tools, guides, and hard-to-find software to help you get started.
 
@@ -34,11 +34,11 @@ This repository aims to walk you through:
 
 Coming soon (in the `docs/` folder):
 
-- 📐 [FlatCAM Workflow](docs/flatcam-workflow.md)
-- 🛠️ [CNC Machine Setup](docs/cnc-setup.md)
-- 🧾 [Recommended Materials & Tools](docs/materials-list.md)
-- 🧰 [Common Issues & Fixes](docs/troubleshooting.md)
-- 📂 [Example Projects](examples/)
+-  [FlatCAM Workflow](docs/flatcam-workflow.md)
+-  [CNC Machine Setup](docs/cnc-setup.md)
+-  [Recommended Materials & Tools](docs/materials-list.md)
+-  [Common Issues & Fixes](docs/troubleshooting.md)
+-  [Example Projects](examples/)
 
 ---
 
