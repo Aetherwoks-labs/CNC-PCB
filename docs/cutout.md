@@ -28,4 +28,4 @@
 
 ---
 
-🏁 Final step: [Candle Workflow](./docs/candle.md)
+🏁 Final step: [Candle Workflow](./candle.md)
