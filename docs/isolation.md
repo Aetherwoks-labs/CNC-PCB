@@ -1,23 +1,40 @@
-# 🌀 Isolation Routing (FlatCAM)
+# Isolation Routing (FlatCAM)
 
-## Step-by-step:
-1. **Load Gerber File**: Load the Bottom Copper layer (`.gbr`) into FlatCAM.
-2. **Isolation Routing Tool**:
-   - Select `Tool Type`: `V` or `C` depending on your bit (Choose 'C' to specify cut depth even with v-bit
-   - Tool Diameter: `0.1 mm` (for V-bit) or `0.2–0.3 mm` (flat-end)
-   - Number of passes: `1–2` (recommended if trace clearance < 0.3 mm)
-   - Pass overlap: `30–50%`
+## General Setup
+- Tool Type: V-bit or Flat End Mill
+- Tool Diameter: typically 0.1–0.2 mm for V-bit
+- Number of passes: 1–2 (test trace clearance)
+- Overlap: 30–50%
 
-3. **Set Tool Parameters**:
-   - Feed rate (x, y) : `200 mm/min`
-   - Feed rate (z) : `60 mm/min`
-   - Spindle speed: `10000 RPM`
-   - Cut Z: `-0.25 to -0.3 mm` (for reliable isolation)
+## Job Creation Steps
+1. Load **bottom copper Gerber** (.gbr)
+2. Click **"Select"** → Then go to **"Isolation Routing"**
+3. Set parameters:
+   - Tool dia: `0.1 mm` (V-bit assumed)
+   - Passes: `2` for narrow trace spacing
+   - Overlap: `0.1` (for closer overlap)
+   - Combine: Leave unchecked
+4. Click **"Generate Geometry"**
+5. Open the newly created geometry
+6. Set machining parameters:
+   - Cut Z: `-0.25 mm to -0.3 mm`
    - Travel Z: `3 mm`
-   - Dwell: `0.5 s` (optional for precision)
-  
-4. **Generate and edit geomotry object**
-   - Delete border geometry object and save
+   - Feedrate X/Y: `200 mm/min`
+   - Feedrate Z: `60 mm/min`
+   - Spindle speed: `10000 RPM` (or your machine’s default)
+   - Dwell: `0.5 s` (optional)
+7. Click **"Generate CNC Job"**, then **"Export G-code"**
+8. Save as `isolation.nc`
 
-5. **Generate and Save G-code**:
-   - Name it clearly: e.g., `isolation_83x69.nc`
+## ⚠️ Notes & Tips
+- Always **delete border isolation** if it will remove the copper at origin — you need it to Z-zero with probe.
+- If traces are still connected: increase depth slightly or do a second pass
+- If trace clearance < 0.3 mm, always test first
+- Run on scrap copper board before committing
+- G-code can be simulated in Candle before real cutting
+
+---
+
+✅ You’re now ready to run `isolation.nc` in Candle.
+
+Continue to: [Drilling Process](./drilling.md)
