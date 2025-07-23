@@ -8,8 +8,8 @@
 1. Load **drill file** (`.drl`)
 2. Click **"Select"** → then go to **"Drill Tool"** tab
 3. Configure drill parameters:
-   - Tool dia: `0.8 mm` or appropriate bit
-   *There is an option for tool change if you are drilling different sizes*
+   - Tool dia: `0.8 mm` or appropriate bit 
+  (*There is an option for tool change if you are drilling different sizes*) 
    - Cut Z: `-1.45 mm` (for FR4 board)
    - Travel Z: `3 mm`
    - Feedrate X/Y: `200 mm/min`
