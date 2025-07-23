@@ -15,6 +15,9 @@
    - Cut Z: `-0.25 to -0.3 mm` (for reliable isolation)
    - Travel Z: `3 mm`
    - Dwell: `0.5 s` (optional for precision)
+  
+4. **Generate and edit geomotry object**
+   - Delete border geometry object and save
 
-4. **Generate and Save G-code**:
+5. **Generate and Save G-code**:
    - Name it clearly: e.g., `isolation_83x69.nc`
