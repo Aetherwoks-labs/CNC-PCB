@@ -41,7 +41,10 @@ Coming soon (in the `docs/` folder):
 -  [Example Projects](examples/)
 
 ---
+## 📜 License
 
+- Code & tools: [MIT License](./LICENSE)
+- Documentation & tutorials: [CC BY 4.0](./docs/LICENSE-docs.md)
 ---
 
 ## 🤝 Contributing
