@@ -22,7 +22,6 @@
 
 ## ⚠️ Tips
 - Use **tabs** (bridges) to hold the board in place — or strong adhesive
-- Make sure your bit is long enough to fully cut through
 - Always check **alignment** before final cut
 - **Feedrate values have been tested only with Masuter Pro 4000**
 
