@@ -27,7 +27,7 @@
 8. Save as `isolation.nc`
 
 ## ⚠️ Notes & Tips
-- Always **delete border isolation** (if not, it will remove the copper at origin — you need it to Z-zero with probe.)
+-  After generating isolation geometry, **delete the outer border** isolation lines.
 - If traces are still connected: increase depth slightly or do a second pass
 - If trace clearance < 0.3 mm, always test first
 - Run on scrap copper board before committing
