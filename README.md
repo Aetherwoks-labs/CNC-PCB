@@ -30,17 +30,23 @@ This repository aims to walk you through:
 
 ---
 
-## 📚 Resources & Guides
-
-Coming soon (in the `docs/` folder):
-
--  [FlatCAM Workflow](docs/flatcam-docs/)
+##  Documentation
 -  [CNC Machine Setup](docs/cnc-setup.md)
 -  [Recommended Materials & Tools](docs/materials-list.md)
--  [Common Issues & Fixes](docs/troubleshooting.md)
--  [Example Projects](examples/)
+-  [FlatCAM Workflow](docs/flatcam-docs.md)
+-  [Origin Handling](docs/origin_handling.md)
+-  [Candle Execution](docs/candle.md)
+-  [Troubleshooting](docs/troubleshooting.md)
+
+➡️ View full docs index: [SUMMARY.md](docs/SUMMARY.md)
 
 ---
+## 📏 Probe Grid Calculator
+Use the tool to calculate optimal probe and interpolation grids for any board size:
+👉 [Launch Calculator](https://aetherwoks-labs.github.io/CNC-PCB/calculator/)
+
+---
+
 ## 📜 License
 
 - Code & tools: [MIT License](./LICENSE)
@@ -56,4 +62,4 @@ Found a tip, legacy version, or workflow that works better? Contributions are we
 
 ---
 
-> Maintained with ⚙️ by [Aetherwoks-labs](https://github.com/Aetherwoks-labs)
+> Maintained by [Aetherwoks-labs](https://github.com/Aetherwoks-labs)
