@@ -27,4 +27,4 @@
 
 ---
 
-🏁 Final step: [Candle Workflow](./candle.md)
+🏁 Final step: [Candle Workflow](../candle.md)
