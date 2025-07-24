@@ -45,8 +45,6 @@
     .result span {
       font-weight: bold;
     }
-    .good { color: green; }
-    .bad { color: red; }
   </style>
 </head>
 <body>
@@ -69,7 +67,7 @@
       <p>🔹 Recommended Interpolation Grid: <span id="interpGrid"></span></p>
       <p>🔹 Interpolation Spacing X: <span id="interpSpacingX"></span> mm</p>
       <p>🔹 Interpolation Spacing Y: <span id="interpSpacingY"></span> mm</p>
-      <p style="font-size: small;">✅ Green = Good for V-bit isolation (≤ 3 mm spacing)</p>
+      <p style="font-size: small; color: green;">✔️ All values ensure V-bit isolation safety (≤ 3 mm spacing)</p>
     </div>
   </div>
 
@@ -80,11 +78,11 @@
 
       const probeX = Math.ceil(width / 10);
       const probeY = Math.ceil(height / 10);
-      const interpX = Math.ceil(width / 2.9);
-      const interpY = Math.ceil(height / 2.9);
+
+      const interpX = Math.ceil((width / 3) + 1);
+      const interpY = Math.ceil((height / 3) + 1);
 
       const spacing = (axis, points) => points > 1 ? (axis / (points - 1)).toFixed(2) : '0.00';
-      const good = (value) => parseFloat(value) <= 3;
 
       const psx = spacing(width, probeX);
       const psy = spacing(height, probeY);
@@ -98,9 +96,6 @@
       document.getElementById('interpGrid').textContent = `${interpX} x ${interpY}`;
       document.getElementById('interpSpacingX').textContent = isx;
       document.getElementById('interpSpacingY').textContent = isy;
-
-      document.getElementById('interpSpacingX').className = good(isx) ? 'good' : 'bad';
-      document.getElementById('interpSpacingY').className = good(isy) ? 'good' : 'bad';
 
       document.getElementById('result').style.display = 'block';
     };
