@@ -34,7 +34,7 @@ This repository aims to walk you through:
 
 Coming soon (in the `docs/` folder):
 
--  [FlatCAM Workflow](docs/flatcam-workflow.md)
+-  [FlatCAM Workflow](docs/flatcam-docs/)
 -  [CNC Machine Setup](docs/cnc-setup.md)
 -  [Recommended Materials & Tools](docs/materials-list.md)
 -  [Common Issues & Fixes](docs/troubleshooting.md)
