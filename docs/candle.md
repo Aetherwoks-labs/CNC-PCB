@@ -16,12 +16,12 @@ This section outlines how to execute your PCB job in **Candle** after generating
 ---
 
 ## Z-Probing
-1. In Candle, click on Z-probe button
+1. In Candle, click on the Z-probe button
 2. Set your Z origin
-3. Go to heightmap tab
+3. Go to the heightmap tab
    - Set Interpolation and probe grid values based on your board size
 5. Hit **"Probe"**
-6. Save map once done probing and select **"use height map"** 
+6. Save the map once done probing and select **"use height map"** 
 
 > ⚠️ **Important**: Do not re-zero after heightmap probing unless you redo the probe.
 
