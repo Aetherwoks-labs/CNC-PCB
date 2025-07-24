@@ -50,22 +50,12 @@
     <label>Board Height (mm)</label>
     <input type="number" id="height" value="69.17">
 
-    <label>Probe Grid X</label>
-    <input type="number" id="probeX" value="10">
-
-    <label>Probe Grid Y</label>
-    <input type="number" id="probeY" value="9">
-
-    <label>Interpolation Grid X</label>
-    <input type="number" id="interpX" value="30">
-
-    <label>Interpolation Grid Y</label>
-    <input type="number" id="interpY" value="30">
-
     <div class="result">
-      <h2>📏 Calculated Spacing</h2>
+      <h2>📏 Calculated Results</h2>
+      <p>🔹 Probe Grid: <span id="probeGrid"></span></p>
       <p>🔹 Probe Spacing X: <span id="probeSpacingX"></span> mm</p>
       <p>🔹 Probe Spacing Y: <span id="probeSpacingY"></span> mm</p>
+      <p>🔹 Interpolation Grid: <span id="interpGrid"></span></p>
       <p>🔹 Interpolation Spacing X: <span id="interpSpacingX"></span> mm</p>
       <p>🔹 Interpolation Spacing Y: <span id="interpSpacingY"></span> mm</p>
       <p style="font-size: small;">✅ Green = Good for V-bit isolation (≤ 3 mm)</p>
@@ -76,10 +66,14 @@
     const calc = () => {
       const width = parseFloat(document.getElementById('width').value);
       const height = parseFloat(document.getElementById('height').value);
-      const probeX = parseInt(document.getElementById('probeX').value);
-      const probeY = parseInt(document.getElementById('probeY').value);
-      const interpX = parseInt(document.getElementById('interpX').value);
-      const interpY = parseInt(document.getElementById('interpY').value);
+
+      // Auto-select probe grid based on board size
+      const probeX = Math.ceil(width / 10);
+      const probeY = Math.ceil(height / 10);
+
+      // Auto-select interpolation grid based on finer resolution
+      const interpX = Math.ceil(width / 3);
+      const interpY = Math.ceil(height / 3);
 
       const spacing = (axis, points) => points > 1 ? (axis / (points - 1)).toFixed(2) : '0.00';
       const good = (value) => parseFloat(value) <= 3;
@@ -89,8 +83,11 @@
       const isx = spacing(width, interpX);
       const isy = spacing(height, interpY);
 
+      document.getElementById('probeGrid').textContent = `${probeX} x ${probeY}`;
       document.getElementById('probeSpacingX').textContent = psx;
       document.getElementById('probeSpacingY').textContent = psy;
+
+      document.getElementById('interpGrid').textContent = `${interpX} x ${interpY}`;
       document.getElementById('interpSpacingX').textContent = isx;
       document.getElementById('interpSpacingY').textContent = isy;
 
